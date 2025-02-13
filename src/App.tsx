@@ -9,7 +9,7 @@ function App(): React.JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UM COS420 WOWIE MATTHEW TINKHAM with React Hooks and TypeScript. Hello World
+                UM COS420 WOWIE MATTHEW TINKHAM with React Hooks and TypeScript.
             </header>
             <hr></hr>
             <Counter></Counter>
