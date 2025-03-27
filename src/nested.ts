@@ -115,10 +115,8 @@ export function renameQuestionById(
     newName: string
 ): Question[] {
     let newQuestions: Question[] = [...questions];
-    let newQuestion: Question = questions[targetId]
-    newQuestion
-    newQuestions[targetId] = newQuestion
-    return newQuestions;
+ 
+    return newQuestions.map(question => question.id === targetId ? {...question, name: newName}: question);
 }
 
 /**
@@ -133,11 +131,20 @@ export function renameQuestionById(
  * 
  * Hint: you need to use the ... operator for both the question and the options array
  */
+
+export function findId(questions: Question[], targetId: number): number {
+    return questions.findIndex((question) => question.id === targetId);
+}
+
 export function editOption(
     questions: Question[],
     targetId: number,
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    let newQuestions: Question[] = [...questions];
+    let index: number = findId(newQuestions, targetId);
+    let newOptionList: string[] = [...newQuestions[index].options];
+    targetOptionIndex >= 0 ? newOptionList[targetOptionIndex] = newOption: newOptionList.push(newOption);
+    return newQuestions.map(question => question.id === targetId ? {...question, options: newOptionList}: question);
 }
