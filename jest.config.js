@@ -2,7 +2,7 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 module.exports = {
     preset: "ts-jest",
-    testEnvironment: "jsdom",
+    n,
     resetMocks: true,
     transform: {
         "\\.(html|css)$": "<rootDir>/jest/raw-loader.js",
