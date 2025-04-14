@@ -1,27 +1,22 @@
 import React from "react";
 import "./App.css";
-import { ChangeType } from "./components/ChangeType";
-import { RevealAnswer } from "./components/RevealAnswer";
-import { TwoDice } from "./components/TwoDice";
-import { Counter } from "./components/Counter";
-import { CycleHoliday } from "./components/CycleHoliday";
+//import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
 
 function App(): React.JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UM COS420 WOWIE MATTHEW TINKHAM with React Hooks and TypeScript. Hello World
+                UM COS420 WOWIE MATTHEW TINKHAM with React Hooks and TypeScript.
+                Hello World
             </header>
             <hr></hr>
-            <Counter></Counter>
-            <hr />
-            <RevealAnswer></RevealAnswer>
-            <hr />
-            <TwoDice></TwoDice>
-            <hr />
-            <ChangeType></ChangeType>
-            <hr />
-            <CycleHoliday></CycleHoliday>
+            {/* <DoubleHalf></DoubleHalf> */}
+            <hr></hr>
+            <ChooseTeam></ChooseTeam>
+            <hr></hr>
+            <ColoredBox></ColoredBox>
         </div>
     );
 }
